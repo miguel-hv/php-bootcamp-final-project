@@ -7,14 +7,20 @@
 
 {% block body %}
 <div class="c-home">
-    <h1> Escateo </h1>
+    <h1 class="title"> Escateo </h1>
     <div>
         Ésta es mi página home.
     </div>
-    <div >
+    <div class="c-link-wrap">
         texto de prueba
         <a class="link" href="{{ path('registerPage') }}">Registrarse</a>
         <a class="link" href="{{ path('loginPage') }}">Iniciar sesión</a>
+    </div>
+    <div class="c-gallery">
+        {% for item in comments %}
+            <div>{{ item }}</div>
+        {% endfor %}
+
     </div>
 </div>
 

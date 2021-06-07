@@ -13,16 +13,14 @@ class DefaultController extends AbstractController {
      */
     public function homePage(): Response
     {
-        return $this->render('Home/home.html.twig', []);
+        return $this->render('Home/home.html.twig', ['comments'=>['comentario primero','comentario segundo','comentario tercero']]);
     }
 
-    /**
-     * @Route("/register", name="registerPage")
-     */
-    public function registerPage(): Response
+
+/*    public function registerPage(): Response
     {
         return $this->render('Register/register.html.twig',[]);
-    }
+    }*/
 
     /**
      * @Route("/login", name="loginPage")

@@ -1,5 +1,7 @@
 @import './main.css';
 
-.link{
-    color: var(--color-link);
+.c-gallery{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

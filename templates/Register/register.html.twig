@@ -2,5 +2,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <a class="link" href="{{ path('homePage') }}" > < Home </a>
     Registro
+    {{ form_start(registerForm) }}
+        {{ form_widget(registerForm) }}
+    <button type="submit"> Enviar </button>
+    {{ form_end(registerForm) }}
+
+    {% for message in app.flashes('success') %}
+        <p>{{ message }}</p>
+    {% endfor %}
 {% endblock %}
