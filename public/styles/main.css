@@ -3,9 +3,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;600&family=Sansita:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /*MOBILE FIRST*/
+/*paleta colores flúor
+
+    azul: #1cedae
+    rosa: #ff0571
+    amarillo: #c2ff05
+    verde: #1eff05
+    rojo: #ff0534
+    */
+
+
 :root{
     --font-size-main: 18px;
     --font-size-secondary: 0.8rem;
+    --color-link: #ff0571;
+
 }
 
 html {
