@@ -4,6 +4,7 @@
 namespace App\Controller;
 use App\Form\registerFormType;
 use \Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Routing\Annotation\Route;
 
 class AuthController extends AbstractController
 {

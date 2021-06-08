@@ -14,6 +14,18 @@
         {% block javascripts %}
         {% endblock %}
     </head>
+
+    <nav class="b-nav">
+        {% block nav %}
+            <div class="b-nav__link">
+                <a class="link" href="{{ path('homePage') }}" > < Home </a>
+            </div>
+            <div class="b-nav__title">
+                <h1 class="title"> Escateo </h1>
+            </div>
+        {% endblock %}
+    </nav>
+
     <body>
         {% block body %}{% endblock %}
     </body>

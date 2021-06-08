@@ -13,7 +13,7 @@ class DefaultController extends AbstractController {
      */
     public function homePage(): Response
     {
-        return $this->render('Home/home.html.twig', ['comments'=>['comentario primero','comentario segundo','comentario tercero']]);
+        return $this->render('Home/home.html.twig', []);
     }
 
 
@@ -35,6 +35,6 @@ class DefaultController extends AbstractController {
      */
     public function profilePage(): Response
     {
-        return $this->render('Profile/profile.html.twig', []);
+        return $this->render('Profile/profile.html.twig', ['comments'=>['comentario primero','comentario segundo','comentario tercero']]);
     }
 }

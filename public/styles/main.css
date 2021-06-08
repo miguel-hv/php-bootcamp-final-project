@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;600&family=Sansita:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /*MOBILE FIRST*/
+/* iphone 6/7/8 */
 /*paleta colores flúor
 
     azul: #1cedae
@@ -17,23 +18,49 @@
     --font-size-main: 18px;
     --font-size-secondary: 0.8rem;
     --font-size-title: 2.8rem;
+    --font-size-subtitle: 1.2rem;
     --color-link: #ff0571;
-
+    --color-background: rgba(28, 237, 174,0.4);
 }
 
 
 html {
     font-size: var(--font-size-main);
     font-family: Sansita;
-    /*background: rgba(194, 255, 5,1);*/
+    /*background: var(--color-background);*/
+    height: 100%;
+    background: rgb(255,5,113);
+    background: linear-gradient(0deg, rgba(194, 240, 5, 0.35) 0%, rgba(28, 237, 174, 0.35) 50%);
 }
 
-.link{
+.b-nav {
+    margin-top: 9px;
+    margin-bottom: 28px;
+
+}
+.b-nav__link {
+    padding-left: 10px;
+}
+
+.b-nav__title {
+    margin-top: 15px;
+}
+
+.link {
     color: var(--color-link);
 }
 
-.title{
+.link--subtitle {
+    font-size: var(--font-size-subtitle);
+}
+
+.link--secondary{
+    font-size: var(--font-size-secondary);
+}
+
+.title {
     font-family: Sansita Swashed;
     text-align: center;
     font-size: var(--font-size-title);
 }
+

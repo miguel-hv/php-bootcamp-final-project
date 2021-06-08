@@ -5,23 +5,18 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('styles/home.css') }}">
 {% endblock %}
 
+
 {% block body %}
 <div class="c-home">
-    <h1 class="title"> Escateo </h1>
-    <div>
-        Ésta es mi página home.
-    </div>
-    <div class="c-link-wrap">
-        texto de prueba
-        <a class="link" href="{{ path('registerPage') }}">Registrarse</a>
-        <a class="link" href="{{ path('loginPage') }}">Iniciar sesión</a>
-    </div>
-    <div class="c-gallery">
-        {% for item in comments %}
-            <div>{{ item }}</div>
-        {% endfor %}
 
+    <div class="c-banner">
     </div>
+
+    <div class="b-link-wrap">
+        <a class="link link--subtitle b-link-wrap__item" href="{{ path('registerPage') }}">Registrarse</a>
+        <a class="link link--subtitle b-link-wrap__item" href="{{ path('loginPage') }}">Iniciar sesión</a>
+    </div>
+
 </div>
 
 {% endblock %}
