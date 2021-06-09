@@ -3,11 +3,10 @@
 
 namespace App\Form;
 
-
 use Symfony\Component\Form\FormBuilderInterface;
 use \Symfony\Component\Form\AbstractType;
 
-class registerFormType extends AbstractType
+class CommentFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {

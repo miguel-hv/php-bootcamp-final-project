@@ -1,0 +1,17 @@
+
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('styles/comment.css') }}">
+{% endblock %}
+
+{% block body %}
+    {{ form_start(commentForm) }}
+        {{ form_widget(commentForm) }}
+    <button type="submit"> Enviar </button>
+    {{ form_end(commentForm) }}
+
+        {% for message in app.flashes('success') %}
+            <p>{{ message }}</p>
+        {% endfor %}
+{% endblock %}
