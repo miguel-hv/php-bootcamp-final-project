@@ -46,6 +46,10 @@ html {
     margin-top: 15px;
 }
 
+.breadcrumb--profile {
+    visibility: hidden;
+}
+
 .link {
     color: var(--color-link);
 }

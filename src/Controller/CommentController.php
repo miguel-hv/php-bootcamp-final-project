@@ -17,10 +17,14 @@ class CommentController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
             $data = $form->getData();
-            $comment = new Comentario();
+            $comment = new Comentario($data['name'], $data['title']);
 
 //            $manager->newUser($user); // HACER: ver si meto servicio
             $this->addFlash('success', "Comentario publicado correctamente");
+            return $this->render(
+                'Profile/profile.html.twig',
+                [$comment]
+            );
         }
 
         return $this->render(

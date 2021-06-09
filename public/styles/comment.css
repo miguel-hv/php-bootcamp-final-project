@@ -1,0 +1,14 @@
+
+.breadcrumb--profile {
+    visibility: visible;
+}
+
+.c-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-form label {
+    display: block;
+}

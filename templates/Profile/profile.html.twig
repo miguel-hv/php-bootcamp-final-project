@@ -11,18 +11,12 @@
 
 {% block body %}
 
-{#    Mi página de perfil ^^#}
-{#    <div class="c-gallery">#}
-{#        {% for item in comments %}#}
-{#            <div>{{ item }}</div>#}
-{#        {% endfor %}#}
-
-{#    </div>#}
-<div class="prueba">
-    prueba
-</div>
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
+    {% if comment is defined %}
+    <div>
+        {{ comment }};
+    </div>
+    {% endif %}
+    <div class="c-comments">
 
         <div class="mySlides">prueba</div>
         <div class="mySlides">prueba2</div>

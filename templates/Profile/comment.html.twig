@@ -6,12 +6,15 @@
 {% endblock %}
 
 {% block body %}
-    {{ form_start(commentForm) }}
+    <div class="c-form">
+        {{ form_start(commentForm) }}
         {{ form_widget(commentForm) }}
-    <button type="submit"> Enviar </button>
-    {{ form_end(commentForm) }}
+        <button type="submit"> Enviar </button>
+        {{ form_end(commentForm) }}
 
         {% for message in app.flashes('success') %}
             <p>{{ message }}</p>
         {% endfor %}
+    </div>
+
 {% endblock %}
