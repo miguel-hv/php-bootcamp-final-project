@@ -22,19 +22,9 @@ class DefaultController extends AbstractController {
         return $this->render('Register/register.html.twig',[]);
     }*/
 
-    /**
-     * @Route("/login", name="loginPage")
-     */
-    public function loginPage(): Response
+/*    public function loginPage(): Response
     {
         return $this->render('Login/login.html.twig', []);
-    }
+    }*/
 
-    /**
-     * @Route("/profile", name="profilePage")
-     */
-    public function profilePage(): Response
-    {
-        return $this->render('Profile/profile.html.twig', ['comments'=>['comentario primero','comentario segundo','comentario tercero']]);
-    }
 }

@@ -48,12 +48,26 @@
     color: white;
 }
 
-
-
-/* Add an italic font style to all quotes */
-.q {
-    font-style: italic;
+.c-card-user {
+    display: flex;
+    margin: 0px 20px;
 }
 
-/*!* Add a blue color to the author *!*/
-/*.author {color: cornflowerblue;}*/
+.c-card-user__image-wrap {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 10%;
+}
+
+.c-card-user__image {
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    object-position: 50% 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.c-card-user__info {
+    padding: 20px;
+}

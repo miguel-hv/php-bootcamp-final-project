@@ -11,23 +11,24 @@
 
 {% block body %}
 
-    {% if comment is defined %}
-    <div>
-        {{ comment }};
-    </div>
-    {% endif %}
-    <div class="c-comments">
-
-        <div class="mySlides">prueba</div>
-        <div class="mySlides">prueba2</div>
-
-        <!-- Full-width slides/quotes -->
-        <div class="c-gallery">
-            {% for item in comments %}
-                <div class="mySlides">{{ item }}</div>
-            {% endfor %}
+    <div class="c-card-user">
+{#        <div class="c-card-user__image-wrap">#}
+{#            <div style="background-image: {{ image }}" class="c-card-user__image-wrap">#}
+            <img class="c-card-user__image" src="{{ asset('skatesucka.png') }}" alt="user-nombre">
+{#        </div>#}
+        <div class="c-card-user__info">
+            nombre
         </div>
 
+    </div>
+    <div class="c-comments">
+
+
+        {% for item in commentsTwig %}
+            <div class="mySlides">{{ item.title }}</div>
+        {% endfor %}
+
+        <div class="mySlides">prueba</div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>

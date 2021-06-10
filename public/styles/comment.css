@@ -1,3 +1,4 @@
+@import "main.css";
 
 .breadcrumb--profile {
     visibility: visible;
@@ -11,4 +12,9 @@
 
 .c-form label {
     display: block;
+}
+
+.help-text {
+    font-size: var(--font-size-secondary);
+    color: #888888;
 }
