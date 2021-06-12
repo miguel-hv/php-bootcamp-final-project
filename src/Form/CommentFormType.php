@@ -3,6 +3,7 @@
 
 namespace App\Form;
 
+use App\Entity\Comment;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use \Symfony\Component\Form\AbstractType;
