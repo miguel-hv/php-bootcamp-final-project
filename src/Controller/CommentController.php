@@ -27,7 +27,7 @@ class CommentController extends AbstractController
         ["commentsTwig"=>$comments]);
     }
     /**
-     * @Route("/profile/comment", name="commentPage")
+     * @Route("/profile/post", name="commentPage")
      */
     public function addComment(Request $request, EntityManagerInterface $doctrine): Response
     {
@@ -43,10 +43,7 @@ class CommentController extends AbstractController
             $doctrine->flush();
 
             $this->addFlash('success', "Comentario publicado correctamente");
-//            return $this->render(
-//                'Profile/profile.html.twig',
-//                [$comment]
-//            );
+            return $this->redirectToRoute('profilePage');
         }
 
         return $this->render(

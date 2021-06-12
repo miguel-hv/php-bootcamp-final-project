@@ -6,6 +6,24 @@
     align-items: center;
 }
 
+.button{
+    background-color: red;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.button:hover{
+    background-color: #555;
+}
+
+.button:active{
+    background-color: black;
+}
+
+
+
 .c-comments {
     position: relative;
     background: #f1f1f1f1;

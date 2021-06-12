@@ -21,8 +21,11 @@
         </div>
 
     </div>
-    <div class="c-comments">
 
+    <a class="button button--big" href="{{ path('commentPage') }}">Publicar</a>
+
+    <p>Tablón de anuncios</p>
+    <div class="c-comments">
 
         {% for item in commentsTwig %}
             <div class="b-comment-slides">{{ item.title }}</div>
