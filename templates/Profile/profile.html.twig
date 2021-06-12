@@ -25,12 +25,12 @@
 
 
         {% for item in commentsTwig %}
-            <div class="mySlides">{{ item.title }}</div>
+            <div class="b-comment-slides">{{ item.title }}</div>
         {% endfor %}
 
-        <div class="mySlides">prueba</div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="b-comment-slides">prueba</div>
+        <a class="b-comment-slides__prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="b-comment-slides__next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
 {% endblock %}

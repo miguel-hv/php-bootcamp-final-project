@@ -19,7 +19,7 @@ class DefaultController extends AbstractController {
 
 /*    public function registerPage(): Response
     {
-        return $this->render('Register/register.html.twig',[]);
+        return $this->render('Registration/register.html.twig',[]);
     }*/
 
 /*    public function loginPage(): Response

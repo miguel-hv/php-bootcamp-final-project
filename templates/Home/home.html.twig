@@ -14,7 +14,11 @@
 
     <div class="b-link-wrap">
         <a class="link link--subtitle b-link-wrap__item" href="{{ path('registerPage') }}">Registrarse</a>
-        <a class="link link--subtitle b-link-wrap__item" href="{{ path('loginPage') }}">Iniciar sesión</a>
+        {% if app.user %}
+            <a class="link link--subtitle b-link-wrap__item" href="{{ path('profilePage') }}">Mi perfil</a>
+        {% else %}
+            <a class="link link--subtitle b-link-wrap__item" href="{{ path('app_login') }}">Iniciar sesión</a>
+        {% endif %}
     </div>
 
 </div>

@@ -6,7 +6,8 @@
 
 .c-banner {
     background-image: url(../pool.jpg);
-    height: 265px;
+    /*height: 265px;*/
+    height: 71vw;
     width: 100%;
     background-position: 50% 15%;
     background-repeat: no-repeat;
@@ -17,6 +18,7 @@
 .b-link-wrap {
     display: flex;
     justify-content: center;
+    margin-bottom: 10vw;
 }
 
 .b-link-wrap__item {

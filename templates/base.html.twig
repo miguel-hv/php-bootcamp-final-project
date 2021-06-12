@@ -17,8 +17,11 @@
     <nav class="b-nav">
         {% block nav %}
             <div class="b-nav__link">
-                <a class="link" href="{{ path('homePage') }}" > < Home </a>
+                <a class="link" href="{{ path('homePage') }}" > < Inicio </a>
                 <a class="link breadcrumb--profile" href="{{ path('profilePage') }}" > < Perfil </a>
+                {% if is_granted('ROLE_USER') %}
+                    <a class="link breadcrumb--logout" href="{{ path('app_logout') }}" > < Cerrar sesión </a>
+                {% endif %}
             </div>
             <div class="b-nav__title">
                 <h1 class="title"> Escateo </h1>

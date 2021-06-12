@@ -6,23 +6,18 @@
     align-items: center;
 }
 
-.prueba{
-    color: red;
-}
-
-
 .c-comments {
     position: relative;
     background: #f1f1f1f1;
 }
 
-.mySlides {
+.b-comment-slides {
     display: none;
     padding: 80px;
     text-align: center;
 }
 
-.prev, .next {
+.b-comment-slides__prev, .b-comment-slides__next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -35,15 +30,13 @@
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
-
-/* Position the "next button" to the right */
-.next {
+.b-comment-slides__next {
     position: absolute;
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-.prev:focus, .next:focus {
+.b-comment-slides__prev:focus, .b-comment-slides__next:focus {
     background-color: red;
     color: white;
 }
