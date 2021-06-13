@@ -115,6 +115,10 @@ html {
 .c-form input {
     margin-bottom: 4px;
 }
+.c-form textarea {
+    width: 42vw;
+    height: 20vw;
+}
 
 .c-form button{
     margin-top: 12px;
