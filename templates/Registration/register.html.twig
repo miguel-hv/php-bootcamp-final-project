@@ -3,14 +3,14 @@
 
 {% block body %}
 
-    <h2 class="title">Registro</h2>
+    <h2 class="title title--form">Registro</h2>
     <div class="c-form">
         {{ form_start(registerForm) }}
         {{ form_row(registerForm.username) }}
         {{ form_row(registerForm.email) }}
         {{ form_row(registerForm.avatar) }}
         {{ form_row(registerForm.password) }}
-        <button type="submit"> Enviar </button>
+        <button class="button" type="submit"> Enviar </button>
         {{ form_end(registerForm) }}
     </div>
 
