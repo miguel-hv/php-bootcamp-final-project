@@ -5,7 +5,7 @@
 }
 
 .c-banner {
-    background-image: url(../pool.jpg);
+    background-image: url(../images/pool.jpg);
     /*height: 265px;*/
     height: 71vw;
     width: 100%;
@@ -15,14 +15,4 @@
     margin-bottom: 50px;
 }
 
-.b-link-wrap {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10vw;
-}
 
-.b-link-wrap__item {
-    padding-left: 23px;
-    padding-right: 23px;
-
-}

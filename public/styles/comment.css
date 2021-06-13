@@ -4,16 +4,6 @@
     visibility: visible;
 }
 
-.c-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.c-form label {
-    display: block;
-}
-
 .help-text {
     font-size: var(--font-size-secondary);
     color: #888888;

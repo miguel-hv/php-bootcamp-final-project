@@ -28,7 +28,7 @@ class CommentController extends AbstractController
 
         return $this->render(
             'Profile/profile.html.twig',
-        ["commentsTwig"=>$comments, "imagesUser"=>$testImage]);
+        ["commentsTwig"=>$comments]);
     }
     /**
      * @Route("/profile/post", name="commentPage")

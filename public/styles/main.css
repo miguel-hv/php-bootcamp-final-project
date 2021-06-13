@@ -18,6 +18,7 @@
     --font-size-main: 18px;
     --font-size-secondary: 0.8rem;
     --font-size-title-biggest: 2.8rem;
+    --font-size-title-big: 2rem;
     --font-size-title-regular: 1.5rem;
     --font-size-subtitle: 1.2rem;
     --color-link: #ff0571;
@@ -78,7 +79,53 @@ html {
 .title--main {
     font-size: var(--font-size-title-biggest);
 }
-
+.title--page {
+    font-size: var(--font-size-title-big);
+}
 .title--text {
     font-size: var(--font-size-title-regular);
+}
+
+.b-link-wrap {
+    display: flex;
+    justify-content: center;
+    /*margin-bottom: 10vw;*/
+}
+
+.b-link-wrap__item {
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
+.c-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-form label {
+    display: block;
+}
+
+.button{
+    background-color: var(--color-link);
+    color: ghostwhite;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 12px;
+    padding: 0.1em 0.6em;
+}
+
+.button:active{
+    background-color: black;
+}
+
+.button--big{
+    padding: 1em 1.5em;
+}
+
+.button--main{
+    text-align: center;
+    margin-top: 27px;
+    margin-bottom: 32px;
 }

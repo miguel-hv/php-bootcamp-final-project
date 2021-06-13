@@ -1,25 +1,19 @@
 @import './main.css';
 
+.b-nav__title {
+    display:none;
+}
+
+.title__comments {
+    /*padding-left: 20px;*/
+    margin-bottom: 10px;
+}
+
 .c-gallery{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
-.button{
-    background-color: red;
-    color: white;
-    padding: 1em 1.5em;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-
-.button:active{
-    background-color: black;
-}
-
-
 
 .c-comments {
     position: relative;
@@ -28,7 +22,7 @@
 
 .b-comment-slides {
     display: none;
-    padding: 80px;
+    padding: 0 40px;
     text-align: center;
 }
 
@@ -66,16 +60,53 @@
     max-height: 100px;
     border-radius: 10%;
 }
+.c-card-user__image-wrap {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+
+}
 
 .c-card-user__image {
-    width: 30vw;
+    /*width: 30vw;
     height: 30vw;
     object-fit: cover;
     object-position: 50% 50%;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 100%;*/
+    width: 100%;
+    height: auto;
 }
 
 .c-card-user__info {
     padding: 20px;
+}
+
+.b-image-texted{
+    position: relative;
+}
+
+.b-image-texted__image {
+    width: 70%
+}
+
+.b-image-texted__text {
+    position: absolute;
+    bottom: 3px;
+    /*right: 20px;*/
+    background-color: rgba(25, 25, 25, 0.7);
+    color: white;
+    text-align: left;
+    padding: 5px 20px 10px;
+    border-radius: 8px;
+}
+
+.b-text--left{
+    text-align: left;
+}
+
+.b-text--right{
+    text-align: right;
 }

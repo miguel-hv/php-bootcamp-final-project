@@ -6,33 +6,47 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script src="{{ asset('styles/index.js') }}"></script>
+    <script src="{{ asset('scripts/index.js') }}"></script>
 {% endblock %}
 
 {% block body %}
 
     <div class="c-card-user">
-{#        <div class="c-card-user__image-wrap">#}
-{#            <div style="background-image: {{ image }}" class="c-card-user__image-wrap">#}
-            <img class="c-card-user__image" src="{{ asset('skatesucka.png') }}" alt="user-nombre">
-{#        </div>#}
+        <div class="c-card-user__image-wrap">
+            <img class="c-card-user__image" src="{{ app.user.avatar }}" alt="user-nombre">
+        </div>
         <div class="c-card-user__info">
-            nombre
+            {{ app.user.username }}
+            {{ app.user.email }}
         </div>
 
     </div>
 
-    <a class="button button--big" href="{{ path('commentPage') }}">Publicar</a>
+    <div class="button--main">
+        <a class="button button--big" href="{{ path('commentPage') }}">Publicar</a>
+    </div>
 
-    <p>Tablón de anuncios</p>
+    <h2 class="title title__comments">Tablón de anuncios</h2>
+
     <div class="c-comments">
 
         {% for item in commentsTwig %}
             <div class="b-comment-slides">
-               <h3 class="title">{{ item.title | capitalize}}</h3>
-                <p>{{ item.text }}</p>
-                <p>{{ item.name }}</p>
-                <p>{{ item.codUser.Avatar }}</p>
+                <div class="b-image-texted">
+                    <img class="b-image-texted__image" src="{{ item.codUser.avatar }}" alt="user-{{ item.codUser.username }}">
+                    <div class="b-image-texted__text">
+                        <h3 class="title">{{ item.title | capitalize}}</h3>
+                        <p>{{ item.text }}</p>
+                    </div>
+                </div>
+                <div>
+                    <p>{{ item.codUser.username }}</p>
+                    {% if item.codUser.username == app.user.username %}
+                        <p class="b-text--right">
+                            <a class="link" href="">Borrar</a>
+                        </p>
+                    {% endif %}
+                </div>
             </div>
         {% endfor %}
 {#        {% for item in imagesUser %}
