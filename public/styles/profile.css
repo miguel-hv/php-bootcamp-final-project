@@ -82,6 +82,7 @@
 
 .c-card-user__info {
     padding: 20px;
+    flex: 1 0 0;
 }
 
 .b-image-texted{
@@ -95,7 +96,7 @@
 .b-image-texted__text {
     position: absolute;
     bottom: 3px;
-    /*right: 20px;*/
+    width: 100%;
     background-color: rgba(25, 25, 25, 0.7);
     color: white;
     text-align: left;

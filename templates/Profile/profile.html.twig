@@ -16,8 +16,8 @@
             <img class="c-card-user__image" src="{{ app.user.avatar }}" alt="user-nombre">
         </div>
         <div class="c-card-user__info">
-            {{ app.user.username }}
-            {{ app.user.email }}
+            <h1 class="title b-text--left"> {{ app.user.username | capitalize }} </h1>
+            <p class="b-text--right"> {{ app.user.email }} </p>
         </div>
 
     </div>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div>
-                    <p>{{ item.codUser.username }}</p>
+                    <p>{{ item.codUser.username | capitalize }}</p>
                     {% if item.codUser.username == app.user.username %}
                         <p class="b-text--right">
                             <a class="link" href="">Borrar</a>
