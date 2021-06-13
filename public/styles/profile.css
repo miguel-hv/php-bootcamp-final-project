@@ -14,9 +14,6 @@
     text-transform: uppercase;
 }
 
-.button:hover{
-    background-color: #555;
-}
 
 .button:active{
     background-color: black;
@@ -26,7 +23,7 @@
 
 .c-comments {
     position: relative;
-    background: #f1f1f1f1;
+    background: transparent;
 }
 
 .b-comment-slides {
@@ -42,7 +39,7 @@
     width: auto;
     margin-top: -30px;
     padding: 16px;
-    color: #888;
+    color: var(--color-link);
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
@@ -54,9 +51,9 @@
     border-radius: 3px 0 0 3px;
 }
 
-.b-comment-slides__prev:focus, .b-comment-slides__next:focus {
-    background-color: red;
-    color: white;
+.b-comment-slides__prev:active, .b-comment-slides__next:active {
+    /*background-color: red;*/
+    color: black;
 }
 
 .c-card-user {

@@ -28,8 +28,16 @@
     <div class="c-comments">
 
         {% for item in commentsTwig %}
-            <div class="b-comment-slides">{{ item.title }}</div>
+            <div class="b-comment-slides">
+               <h3 class="title">{{ item.title | capitalize}}</h3>
+                <p>{{ item.text }}</p>
+                <p>{{ item.name }}</p>
+                <p>{{ item.codUser.Avatar }}</p>
+            </div>
         {% endfor %}
+{#        {% for item in imagesUser %}
+            <p>{{ item }}</p>
+        {% endfor %}#}
 
         <div class="b-comment-slides">prueba</div>
         <a class="b-comment-slides__prev" onclick="plusSlides(-1)">&#10094;</a>

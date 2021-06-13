@@ -32,6 +32,12 @@ class Comment
      */
     private $text;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="comments")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $codUser;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +75,18 @@ class Comment
     public function setText(?string $text): self
     {
         $this->text = $text;
+
+        return $this;
+    }
+
+    public function getCodUser(): ?user
+    {
+        return $this->codUser;
+    }
+
+    public function setCodUser(?user $codUser): self
+    {
+        $this->codUser = $codUser;
 
         return $this;
     }

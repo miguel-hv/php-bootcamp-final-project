@@ -17,7 +17,8 @@
 :root{
     --font-size-main: 18px;
     --font-size-secondary: 0.8rem;
-    --font-size-title: 2.8rem;
+    --font-size-title-biggest: 2.8rem;
+    --font-size-title-regular: 1.5rem;
     --font-size-subtitle: 1.2rem;
     --color-link: #ff0571;
     --color-background: rgba(28, 237, 174,0.4);
@@ -40,7 +41,9 @@ html {
 
 }
 .b-nav__link {
+    display: flex;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 .b-nav__title {
@@ -49,6 +52,10 @@ html {
 
 .breadcrumb--profile {
     visibility: hidden;
+}
+.breadcrumb--logout{
+    flex: 1 0 0;
+    text-align: right;
 }
 
 .link {
@@ -66,6 +73,12 @@ html {
 .title {
     font-family: Sansita Swashed;
     text-align: center;
-    font-size: var(--font-size-title);
 }
 
+.title--main {
+    font-size: var(--font-size-title-biggest);
+}
+
+.title--text {
+    font-size: var(--font-size-title-regular);
+}

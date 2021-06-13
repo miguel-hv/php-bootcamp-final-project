@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 use App\Entity\Comment;
+use App\Entity\User;
 use App\Form\CommentFormType;
 use Doctrine\ORM\EntityManagerInterface;
 use \Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -21,10 +22,13 @@ class CommentController extends AbstractController
         $repo = $doctrine->getRepository(Comment::class);
 
         $comments = $repo->findAll();
+        foreach ($comments as $comment) {
+            $testImage = $comment->getCodUser();
+        }
 
         return $this->render(
             'Profile/profile.html.twig',
-        ["commentsTwig"=>$comments]);
+        ["commentsTwig"=>$comments, "imagesUser"=>$testImage]);
     }
     /**
      * @Route("/profile/post", name="commentPage")
@@ -37,7 +41,10 @@ class CommentController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
             $comment = $form->getData();
-//            $comment = new Comment($data['name'], $data['title']);
+            $idUser = $this->getUser();
+            $NameUser = $idUser->getUsername();
+            $comment->setCodUser($idUser);
+            $comment->setName($NameUser);
 
             $doctrine->persist($comment);
             $doctrine->flush();
