@@ -21,10 +21,11 @@ class CommentController extends AbstractController
     {
         $repo = $doctrine->getRepository(Comment::class);
 
-        $comments = $repo->findAll();
-        foreach ($comments as $comment) {
-            $testImage = $comment->getCodUser();
-        }
+//        $comments = $repo->findAll();
+        $comments = $repo->findAllOrderedByDate();
+//        foreach ($comments as $comment) {
+//            $testImage = $comment->getCodUser();
+//        }
 
         return $this->render(
             'Profile/profile.html.twig',

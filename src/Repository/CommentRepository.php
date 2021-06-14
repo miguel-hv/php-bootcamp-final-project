@@ -11,12 +11,21 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Comment|null findOneBy(array $criteria, array $orderBy = null)
  * @method Comment[]    findAll()
  * @method Comment[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Comment[]    findAllByDate()
  */
 class CommentRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Comment::class);
+    }
+
+    public function findAllOrderedByDate()
+    {
+        return $this->createQueryBuilder('a')
+            ->addOrderBy('a.id', 'DESC')
+            ->getQuery()
+            ->getResult();
     }
 
     // /**
