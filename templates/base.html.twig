@@ -22,6 +22,8 @@
                 {% if is_granted('ROLE_USER') %}
                     <a class="link breadcrumb--logout" href="{{ path('app_logout') }}" >  Cerrar sesión </a>
                 {% endif %}
+                <a class="link breadcrumb--logout breadcrumb--register" href="{{ path('registerPage') }}" >  Registrarse </a>
+                <a class="link breadcrumb--logout breadcrumb--login" href="{{ path('app_login') }}" >  Iniciar sesión </a>
             </div>
             <div class="b-nav__title">
                 <h1 class="title title--main"> Escateo </h1>

@@ -43,7 +43,7 @@
                     <p>{{ item.codUser.username | capitalize }}</p>
                     {% if item.codUser.username == app.user.username %}
                         <p class="b-text--right">
-                            <a class="link" href="">Borrar</a>
+                            <a class="link" href="{{ path('deletePage',{id:item.id}) }}">Borrar</a>
                         </p>
                     {% endif %}
                 </div>

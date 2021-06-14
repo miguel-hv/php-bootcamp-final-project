@@ -25,14 +25,24 @@ class CommentController extends AbstractController
 
 //        $comments = $repo->findAll();
         $comments = $repo->findAllOrderedByDate();
-//        foreach ($comments as $comment) {
-//            $testImage = $comment->getCodUser();
-//        }
 
         return $this->render(
             'Profile/profile.html.twig',
         ["commentsTwig"=>$comments]);
     }
+    /**
+     * @Route("/profile/delete/{id}", name="deletePage")
+     * @IsGranted("ROLE_USER")
+     */
+    public function deleteComment($id, EntityManagerInterface $doctrine)
+    {
+        $comment = $doctrine->getRepository(Comment::class)->find($id);
+        $doctrine->remove($comment);
+        $doctrine->flush();
+        return $this->redirectToRoute('profilePage');
+    }
+
+
     /**
      * @Route("/profile/post", name="commentPage")
      *  @IsGranted("ROLE_USER")
@@ -53,7 +63,7 @@ class CommentController extends AbstractController
             $doctrine->persist($comment);
             $doctrine->flush();
 
-            $this->addFlash('success', "Comentario publicado correctamente");
+//            $this->addFlash('success', "Comentario publicado correctamente");
             return $this->redirectToRoute('profilePage');
         }
 

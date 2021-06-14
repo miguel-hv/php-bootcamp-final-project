@@ -59,6 +59,14 @@ html {
     text-align: right;
 }
 
+.breadcrumb--register {
+    display: none;
+}
+
+.breadcrumb--login {
+    display: none;
+}
+
 .link {
     color: var(--color-link);
 }
