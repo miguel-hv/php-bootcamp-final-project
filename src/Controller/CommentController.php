@@ -6,6 +6,7 @@ use App\Entity\Comment;
 use App\Entity\User;
 use App\Form\CommentFormType;
 use Doctrine\ORM\EntityManagerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use \Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,6 +17,7 @@ class CommentController extends AbstractController
 
     /**
      * @Route("/profile", name="profilePage")
+     * @IsGranted("ROLE_USER")
      */
     public function profilePage( EntityManagerInterface $doctrine)
     {
@@ -33,6 +35,7 @@ class CommentController extends AbstractController
     }
     /**
      * @Route("/profile/post", name="commentPage")
+     *  @IsGranted("ROLE_USER")
      */
     public function addComment(Request $request, EntityManagerInterface $doctrine): Response
     {
