@@ -6,6 +6,9 @@ El proyecto fue desarrollado a partir de un repositorio contieniendo una instala
 Igualmente tiene composer instalado y el instalador de symfony.
 
 
+![Image of Yaktocat](https://res.cloudinary.com/dsxnjgo2i/image/upload/v1624973750/escateo_profile_tbugv8.png)
+
+
 
 
 
